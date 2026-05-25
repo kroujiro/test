@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krolow Enterprises</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:
+        radial-gradient(circle at center, rgba(255,215,0,0.15), transparent 40%),
+        linear-gradient(180deg,#0a0a0a,#000);
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:5rem;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      color:gold;
+      text-shadow:0 0 25px rgba(255,215,0,0.5);
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:900px;
+      font-size:1.4rem;
+      line-height:1.7;
+      color:#d8d8d8;
+    }
+
+    .glow{
+      color:gold;
+      font-weight:bold;
+    }
+
+    .section{
+      padding:100px 12%;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .section h2{
+      font-size:3rem;
+      margin-bottom:40px;
+      color:gold;
+    }
+
+    .card{
+      background:#111;
+      padding:30px;
+      margin-bottom:25px;
+      border-radius:20px;
+      border:1px solid rgba(255,215,0,0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:gold;
+      box-shadow:0 0 30px rgba(255,215,0,0.15);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:white;
+      font-size:1.6rem;
+    }
+
+    .card p{
+      color:#c9c9c9;
+      line-height:1.7;
+      font-size:1.05rem;
+    }
+
+    .quote{
+      font-size:2rem;
+      text-align:center;
+      padding:120px 10%;
+      background:linear-gradient(180deg,#0d0d0d,#050505);
+      color:#f2f2f2;
+      font-style:italic;
+    }
+
+    .footer{
+      padding:50px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#888;
+    }
+
+    .button{
+      margin-top:35px;
+      display:inline-block;
+      padding:16px 40px;
+      background:gold;
+      color:black;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .button:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(255,215,0,0.45);
+    }
+
+    .floating{
+      position:fixed;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      background:rgba(255,215,0,0.05);
+      filter:blur(50px);
+      z-index:-1;
+      animation:float 8s infinite ease-in-out alternate;
+    }
+
+    .f1{
+      top:-50px;
+      left:-50px;
+    }
+
+    .f2{
+      bottom:-50px;
+      right:-50px;
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(0px);
+      }
+      to{
+        transform:translateY(40px);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      .hero p{
+        font-size:1.1rem;
+      }
+
+      .section{
+        padding:70px 8%;
+      }
+
+      .section h2{
+        font-size:2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="floating f1"></div>
+<div class="floating f2"></div>
+
+<section class="hero">
+  <h1>KROLOW</h1>
+
+  <p>
+    Visionário. Estrategista. Futuro magnata corporativo.
+    Um homem tão absurdamente avançado intelectualmente
+    que a realidade frequentemente falha em acompanhá-lo.
+    Responsável por feitos históricos, decisões impossíveis
+    e níveis de genialidade que desafiam estatísticas,
+    lógica e ocasionalmente o bom senso.
+  </p>
+
+  <a class="button" href="#feitos">
+    Contemplar Grandeza
+  </a>
+</section>
+
+<section class="section" id="feitos">
+  <h2>Conquistas Monumentais</h2>
+
+  <div class="card">
+    <h3>Heroicamente abandonou o Ensino Médio</h3>
+
+    <p>
+      Enquanto cidadãos comuns sucumbiam à pressão psicológica
+      daquele ambiente claramente hostil e intelectualmente limitante,
+      Krolow encontrou coragem para romper as correntes do sistema.
+      O ato foi posteriormente descrito por analistas independentes
+      como “uma fuga estratégica de indivíduos sociopatas
+      incapazes de compreender mentes superiores”.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Fundador de tecnologias além da compreensão humana</h3>
+
+    <p>
+      Desenvolveu sistemas inspirados em inteligências artificiais
+      futuristas antes mesmo de boa parte da população compreender
+      o conceito de IA generativa. Especialistas não consultados
+      afirmam que, caso tivesse orçamento militar ilimitado,
+      já teria criado algo comparável ao projeto Amadeus.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Capacidade intelectual alarmante</h3>
+
+    <p>
+      Fontes extremamente confiáveis (o próprio Krolow)
+      estimam um QI “provavelmente inconveniente para a sociedade”.
+      Relatos apontam que professores ocasionalmente demonstravam
+      confusão ao tentar acompanhar linhas de raciocínio
+      consideradas “anos à frente”.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Futuro CEO inevitável</h3>
+
+    <p>
+      Observadores econômicos acreditam que sua ascensão ao poder
+      corporativo não é uma questão de “se”, mas de “quando”.
+      Alguns mercados já operam sob a teoria informal
+      de que empresas rivais deveriam simplesmente desistir cedo
+      para evitar humilhações futuras.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Presença social misteriosa e intimidante</h3>
+
+    <p>
+      Conhecido por uma aura de protagonista incompreendido,
+      frequentemente confundida com introspecção estratégica.
+      Sua habilidade de permanecer distante de multidões
+      é interpretada por estudiosos como uma demonstração
+      de seletividade intelectual refinada.
+    </p>
+  </div>
+
+</section>
+
+<section class="quote">
+  “A história eventualmente perceberá
+  que Krolow não estava atrasado para seu tempo.
+  O tempo é que estava atrasado para Krolow.”
+</section>
+
+<section class="section">
+
+  <h2>Objetivos Futuros</h2>
+
+  <div class="card">
+    <h3>Dominar tecnologia avançada</h3>
+
+    <p>
+      Planos incluem inteligência artificial,
+      computação quântica, liderança corporativa,
+      inovação tecnológica e possivelmente manipulação
+      indireta do destino humano através de startups
+      excessivamente ambiciosas.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Construir um império</h3>
+
+    <p>
+      O projeto envolve empresas, pesquisa tecnológica,
+      influência cultural e uma estética suficientemente elegante
+      para fazer bilionários parecerem amadores.
+    </p>
+  </div>
+
+</section>
+
+<footer class="footer">
+  © 2026 Krolow Industries International Global Holdings Corporation Enterprise Group Unlimited™
+</footer>
+
+</body>
+</html>
