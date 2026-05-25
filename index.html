@@ -2,41 +2,232 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Krolow Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portal de Maravilhas do Krolow</title>
 
   <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body{
-      background:#050505;
+      min-height:100vh;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,215,0,0.12), transparent 35%),
+        linear-gradient(180deg,#070707,#000);
       color:white;
-      font-family:Arial;
+      overflow:hidden;
       display:flex;
       justify-content:center;
       align-items:center;
-      height:100vh;
-      flex-direction:column;
+      position:relative;
     }
 
-    a{
-      color:gold;
-      text-decoration:none;
-      margin:10px;
-      font-size:1.3rem;
+    .bg-glow{
+      position:absolute;
+      width:500px;
+      height:500px;
+      border-radius:50%;
+      background:rgba(255,215,0,0.06);
+      filter:blur(80px);
+      z-index:0;
+      animation:float 6s ease-in-out infinite alternate;
+    }
+
+    .bg-glow.two{
+      width:350px;
+      height:350px;
+      bottom:-100px;
+      right:-100px;
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      from{
+        transform:translateY(0px);
+      }
+      to{
+        transform:translateY(40px);
+      }
+    }
+
+    .container{
+      position:relative;
+      z-index:1;
+      text-align:center;
+      padding:40px;
+      width:100%;
+      max-width:1100px;
+    }
+
+    .character{
+      width:380px;
+      max-width:90%;
+      margin-bottom:20px;
+      filter:
+        drop-shadow(0 0 30px rgba(255,215,0,0.18))
+        drop-shadow(0 0 60px rgba(255,215,0,0.1));
+      transition:0.35s;
+    }
+
+    .character:hover{
+      transform:scale(1.03);
     }
 
     h1{
+      font-size:4rem;
       color:gold;
+      text-shadow:
+        0 0 15px rgba(255,215,0,0.5),
+        0 0 40px rgba(255,215,0,0.2);
+      margin-bottom:15px;
+      letter-spacing:2px;
     }
+
+    .subtitle{
+      color:#d1d1d1;
+      font-size:1.2rem;
+      margin-bottom:45px;
+      line-height:1.7;
+      max-width:800px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .button-area{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .gold-button{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:260px;
+      padding:20px 35px;
+      text-decoration:none;
+      color:white;
+      font-size:1.15rem;
+      font-weight:bold;
+      letter-spacing:1px;
+
+      background:
+        linear-gradient(180deg,#2a2a2a,#111);
+
+      border:2px solid gold;
+      border-radius:16px;
+
+      box-shadow:
+        0 0 20px rgba(255,215,0,0.15),
+        inset 0 0 10px rgba(255,215,0,0.08);
+
+      transition:0.3s;
+      overflow:hidden;
+    }
+
+    .gold-button::before{
+      content:"";
+      position:absolute;
+      inset:4px;
+      border:1px solid rgba(255,215,0,0.35);
+      border-radius:10px;
+      pointer-events:none;
+    }
+
+    .gold-button::after{
+      content:"✦";
+      position:absolute;
+      top:8px;
+      right:12px;
+      color:gold;
+      font-size:0.9rem;
+      opacity:0.8;
+    }
+
+    .gold-button:hover{
+      transform:translateY(-4px) scale(1.03);
+
+      box-shadow:
+        0 0 35px rgba(255,215,0,0.28),
+        inset 0 0 14px rgba(255,215,0,0.12);
+
+      border-color:#ffe76a;
+    }
+
+    .footer{
+      margin-top:45px;
+      color:#777;
+      font-size:0.9rem;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:2.5rem;
+      }
+
+      .subtitle{
+        font-size:1rem;
+      }
+
+      .gold-button{
+        width:100%;
+      }
+
+      .character{
+        width:280px;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
-<h1>KROLOW PORTAL</h1>
+  <div class="bg-glow"></div>
+  <div class="bg-glow two"></div>
 
-<a href="site.html">Entrar no Site Principal</a>
+  <div class="container">
 
-<a href="portalnet/proportal.m3u8">
-Abrir Stream PortalNet
-</a>
+    <img
+      src="images/rance.png"
+      alt="Grande Líder Krolow"
+      class="character"
+    >
+
+    <h1>Portal de Maravilhas do Krolow</h1>
+
+    <p class="subtitle">
+      Centro oficial de acesso às grandiosas criações,
+      projetos absurdamente ambiciosos e manifestações
+      ocasionais de genialidade corporativa do lendário Krolow.
+    </p>
+
+    <div class="button-area">
+
+      <a class="gold-button" href="site.html">
+        Entrar no Site Principal
+      </a>
+
+      <a class="gold-button" href="portalnet/proportal.m3u8">
+        Abrir PortalNet Stream
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © Krolow Industries Unlimited™
+    </div>
+
+  </div>
 
 </body>
 </html>
