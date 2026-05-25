@@ -76,4 +76,6 @@ playlistop0.ts
 #EXTINF:3.700000,
 playlistop1.ts
 
-# (Linha #EXT-X-ENDLIST removida para manter a tentativa de loop contínuo no player)
+#EXT-X-DISCONTINUITY
+#EXTINF:7.200000,
+playlist0.ts
