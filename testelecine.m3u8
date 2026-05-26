@@ -3,5 +3,5 @@
 #EXT-X-TARGETDURATION:9
 #EXT-X-MEDIA-SEQUENCE:0
 
-#EXTINF:-1,
-http://assistz.top/live/5177029213/3962177/234496.ts
+#EXTINF:-1 tvg-name="Telecine Action HD" tvg-logo="https://mondrian.claro.com.br/channels/inverse/tc-action@3x.png" group-title="CANAIS | TELECINE",Telecine Action HD
+http://assistz.top/live/5177029213/3962177/305.ts
