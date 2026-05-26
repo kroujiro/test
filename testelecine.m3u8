@@ -1,4 +1,7 @@
 #EXTM3U
+#EXT-X-PLAYLIST-TYPE:EVENT
+#EXT-X-TARGETDURATION:8
+#EXT-X-VERSION:3
 
-#EXTINF:-1 tvg-name="Telecine Action HD" tvg-logo="https://mondrian.claro.com.br/channels/inverse/tc-action@3x.png" group-title="CANAIS | TELECINE",Telecine Action HD
+#EXTINF:8,
 http://assistz.top/live/5177029213/3962177/305.ts
